@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Licensing Manager</title>
+  <link rel="shortcut icon" href="Graphics/atom.png">
+
+  <style>
+
+    /* top bar stuff */
+    .top-bar {
+			width: 100%;
+      height: 80px;
+			background-color: rgb(0, 0, 0);
+    }
+
+    .top-bar a {
+      float: right;
+      display: block;
+      text-align: center;
+      padding: 20px;
+      transition: all 0.3s ease;
+      color: #33cccc;
+      font-size: 36px;
+      height: 50%;
+    }
+
+    .top-bar a:hover {
+      height: 50%;
+			background-color: #ffffff;
+		}
+
+    .container {
+      float: left;
+      background-color: #141416;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      position: fixed;
+    }
+
+    /* icon bar stuff */
+    .icon-bar {
+      z-index: 1;
+      top: 1;
+      left: 0;
+			width: 100px;
+      height: 1200px;
+      overflow-x: hidden;
+      position: fixed;
+			background-color: rgb(0, 0, 0);
+    }
+
+    .icon-bar a {
+			display: block;
+			text-align: center;
+			padding: 20px;
+			transition: all 0.3s ease;
+			color: #33cccc;
+			font-size: 36px;
+		}
+
+		.icon-bar a:hover {
+			background-color: #ffffff;
+		}
+
+    /* index stuff */
+    .index {
+      z-index: 0;
+      top: 1;
+      left: 0;
+			width: 350px;
+      height: 1200px;
+      overflow-x: hidden;
+      position: fixed;
+			background-color: #333438;
+    }
+
+    .project {
+      z-index: -1;
+      top: 1;
+      left: 18.3%;
+      width: 80.2%;
+      height: 90%;
+      overflow-x: hidden;
+      background-color: #7f7f7f;
+      border: 20px solid black;
+      position: fixed;
+    }
+
+  </style>
+
+</head>
+
+<body style="background-color:#000000">
+
+<div class="top-bar">
+  <img src="Graphics/header.png" alt="Header" style="padding:15px;height:60%;width:15%">
+
+  <a href="#"><img src="Graphics/settings.png" alt="Settings"></a>
+  <a href="#"><img src="Graphics/notifications.png" alt="Notifications"></a>
+</div>
+
+<div class="container">
+
+  <div class="icon-bar">
+    <a href="#"><img src="Graphics/home.png" alt="Home" style="top:10px"></a> 
+    <a href="#"><img src="Graphics/analysis.png" alt="Analysis" style="top:10px"></a>
+    <a href="#"><img src="Graphics/arrows.png" alt="Compare" style="top:10px"></a>
+    <a href="#"><img src="Graphics/eye.png" alt="Eye" style="top:10px"></a>
+    <a href="#"><img src="Graphics/paper.png" alt="Copy" style="top:10px"></a>
+    <a href="#"><img src="Graphics/send.png" alt="Share" style="top:10px"></a>
+  </div>
+
+  <div class="index">
+
+  </div>
+
+  <div class="project">
+
+  </div>
+
+</div>
+
+  
+</body>
+
+</html> 
