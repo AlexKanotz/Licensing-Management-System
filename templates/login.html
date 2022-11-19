@@ -80,16 +80,30 @@
     </div>
 
     <div class="container">
-        <div class="login-window">
-            <h2 style="text-align:center; padding:20px 0 40px 0;">Login</h2>
-            <label for="username" style="font-size:20px; padding-left:20%;"><b>Username</b></label>
-            <input type="text" value="" placeholder="username" name="username" style="height:20px; margin-left:5px;">
-            <label for="password" style="font-size:20px; padding-left:20%;"><b>Password</b></label>
-            <input type="password" value="" placeholder="password" name="username"
-                style="height:20px; margin:20px 0 0 10px;">
-            <button type="submit">Login</button>
-        </div>
+        <form action="/login" method="POST">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <div class="login-window">
+                <h2 style="text-align:center; padding:20px 0 40px 0;">Login</h2>
+                <label for="uname" style="font-size:20px; padding-left:20%;"><b>Username</b></label>
+                <input type="text" value="" placeholder="username" name="username" style="height:20px; margin-left:5px;">
+                <label for="pass" style="font-size:20px; padding-left:20%;"><b>Password</b></label>
+                <input type="password" value="" placeholder="password" name="password"
+                    style="height:20px; margin:20px 0 0 10px;">
+
+                <form action="editor.html">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </form>
     </div>
 </body>
-
 </html>
