@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, session, flash
-import sqlite3 as sql
 import os
+import sqlite3 as sql
+from flask import Flask, render_template, request, session, flash
 
 app = Flask(__name__)
 
@@ -41,7 +41,7 @@ def login():
             row = cur.fetchone()
             # If the user logs in successfully, track their username and
             # role level and set login status to true.
-            if row != None:
+            if row is not None:
                 conn = sql.connect('LicensingManagementDB.db')
                 curs = conn.cursor()
 
