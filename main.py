@@ -64,6 +64,25 @@ def login():
 
 
 ##########################################
+#         createAccount function         #
+##########################################
+# Take the user to the create account page.
+@app.route('/createAccount')
+def createAccount():
+    return render_template('createAccount.html')
+
+
+##########################################
+#           addAccount function          #
+##########################################
+# Add a user account and store it in the
+# database.
+@app.route('/addAccount', methods=['POST'])
+def addAccount():
+    return render_template('login.html')
+
+
+##########################################
 #             logout function            #
 ##########################################
 # Logout the user and reset their session data.
